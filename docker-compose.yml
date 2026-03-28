@@ -2,5 +2,5 @@ services:
   web_api_forecast:
     image: ${DOCKER_REGISTRY-}webapiforecast
     build:
-      context: .
-      dockerfile: Web_API_Forecast/Dockerfile
+      context: Web_API_Forecast
+      dockerfile: Dockerfile
