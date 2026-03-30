@@ -39,12 +39,15 @@ jobs:
             type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}
-
+            
+      - name: List files in repository
+        run: ls -R
+        
       - name: Build and push Docker image
         id: push
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: Web_API_Forecast/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
