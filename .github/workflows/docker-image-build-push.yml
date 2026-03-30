@@ -1,4 +1,4 @@
-name: Docker Image build and push to the container registry
+name: Docker Image build and push
 
 on:
   pull_request: 
