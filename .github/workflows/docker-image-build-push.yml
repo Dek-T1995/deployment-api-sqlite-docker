@@ -71,7 +71,7 @@ jobs:
         uses: azure/container-apps-deploy-action@v1
         with:
           resourceGroup: DK01_2526_group1
-          containerAppName: con-tim-api-03
+          containerAppName: appcon-github-api-profile-03
           imageToDeploy: ghcr.io/dek-t1995/deployment-api-sqlite-docker:master
           registryUrl: ${{ env.REGISTRY }}
           regisrtyUser: ${{ github.actor }}
