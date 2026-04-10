@@ -72,7 +72,7 @@ jobs:
         with:
           resourceGroup: DK01_2526_group1
           containerAppName: con-tim-api-03
-          imageToDeploy: ghcr.io/${{ github.repository_owner }}/deployment-api-sqlite-docker:master
+          imageToDeploy: ghcr.io/dek-t1995/deployment-api-sqlite-docker:master
           registryUrl: ${{ env.REGISTRY }}
           regisrtyUser: ${{ github.actor }}
           registryPassword: ${{ secrets.GHCR_TOKEN }}
