@@ -3,6 +3,22 @@ name: Docker Image build and push
 on:
   pull_request: 
     branches: [ "master" ]
+    paths-ignore:
+    - '.github/workflows/**'
+    - '**.puml'
+    - '.gitignore'
+    - '.dockerignore'
+    - '**.yml'
+    - 'README.md'
+  push:
+    branches: [ "master" ]
+    paths-ignore: 
+    - '.github/workflows/**'
+    - '**.puml'
+    - '.gitignore'
+    - '.dockerignore'
+    - '**.yml'
+    - 'README.md'
   workflow_dispatch: 
 
 env:
