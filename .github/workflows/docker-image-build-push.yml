@@ -55,9 +55,10 @@ jobs:
             type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}
-            
-      - name: List files in repository
-        run: ls -R
+
+    # Niet langer in gebruik, dit toont alleen de files in de repository. Initieel gebruikt voor troubleshooting van de Github Action
+     # - name: List files in repository
+      #  run: ls -R
         
       - name: Build and push Docker image
         id: push
