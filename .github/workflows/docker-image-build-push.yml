@@ -12,6 +12,8 @@ on:
     - 'README.md'
   push:
     branches: [ "master" ]
+    tags:
+    - 'v*.*.*'
     paths-ignore: 
     - '.github/workflows/**'
     - '**.puml'
@@ -55,6 +57,8 @@ jobs:
             type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
 
     # Niet langer in gebruik, dit toont alleen de files in de repository. Initieel gebruikt voor troubleshooting van de Github Action
      # - name: List files in repository
